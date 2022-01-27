@@ -1,9 +1,34 @@
 <html>
-  <head> </head>
-
+  <head>
+    <link rel="stylesheet" href="index.css" />
+  </head>
   <body>
-    <header></header>
-    <main>Hola</main>
-    <footer></footer>
+    <div class="container">
+      <main>
+        <form>
+          <textarea
+            cols="30"
+            rows="5"
+            maxlength="60"
+            id="input-name"
+            placeholder="Your name here"
+          ></textarea>
+          <button id="button-submit">Print</button>
+        </form>
+      </main>
+    </div>
+    <script type="text/javascript">
+      (function () {
+        document
+          .getElementById("input-name")
+          .addEventListener("keypress", (e) => {
+            const value = e.target.value;
+            const numberOfLines = (value.match(/\n/g) || []).length + 1;
+            if (numberOfLines > 2) {
+              e.preventDefault();
+            }
+          });
+      })();
+    </script>
   </body>
 </html>

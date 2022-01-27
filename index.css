@@ -1,0 +1,36 @@
+.container {
+  width: 100vw;
+  height: 100%;
+  max-width: 900px;
+  background-color: rgb(253, 246, 246);
+}
+
+main {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  background-color: lightgray;
+}
+
+#input-name {
+  border-radius: 10px;
+  padding: 6px;
+  overflow: hidden;
+  resize: none;
+}
+
+#button-submit {
+  border-radius: 10px;
+}
+
+form {
+  column-gap: 10px;
+  display: flex;
+}

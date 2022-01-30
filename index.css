@@ -5,8 +5,18 @@
   background-color: rgb(253, 246, 246);
 }
 
+.title {
+  margin-bottom: 20px;
+  font-family: "system-ui";
+  color: rgb(68, 68, 68);
+}
+
+.sign {
+  margin-top: 20px;
+  color: rgb(51, 51, 51);
+}
+
 main {
-  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;

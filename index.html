@@ -4,35 +4,39 @@
   </head>
   <body>
     <div class="container">
+      <header>header</header>
       <main>
-        <h3>German Letterbox Plate Generator</h3>
+        <h3 class="title">German Letterbox Plate Generator</h3>
         <form id="form">
           <textarea
             cols="30"
             rows="3"
             maxlength="52"
             id="name-input"
-            placeholder="Your name here"
+            placeholder="Type your name here"
           ></textarea>
           <button id="button-submit">Print</button>
         </form>
         <div>
+          <span>✂️</span>
           <div class="preview-box">
             <span class="preview-text"></span>
           </div>
+          <span>✂️</span>
           <div class="preview-box">
             <span class="preview-text"></span>
           </div>
         </div>
-        <footer>
+        <div class="sign">
           <span>Made with ❤️ by </span>
           <a
             href="https://github.com/GabrielBB/german-letterbox-plate-generator"
           >
-            Gabriel
+            Gabriel Basilio
           </a>
-        </footer>
+        </div>
       </main>
+      <footer>footer</footer>
     </div>
 
     <script type="text/javascript">
@@ -43,7 +47,6 @@
           const numberOfLines = (value.match(/\n/g) || []).length + 1;
           if (numberOfLines > 2) {
             e.preventDefault();
-            return;
           }
         });
 
@@ -56,6 +59,10 @@
         const button = document.getElementById("button-submit");
         const form = document.getElementById("form");
         button.addEventListener("click", (e) => {
+          if (nameInput.value.trim() === "") {
+            alert("Please type your name first");
+            return;
+          }
           form.classList.add("hidden");
           window.print();
           form.classList.remove("hidden");

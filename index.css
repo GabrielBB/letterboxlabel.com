@@ -10,6 +10,7 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
 }
 
 body {
@@ -19,7 +20,7 @@ body {
   background-color: lightgray;
 }
 
-#input-name {
+#name-input {
   border-radius: 10px;
   padding: 6px;
   overflow: hidden;
@@ -33,4 +34,26 @@ body {
 form {
   column-gap: 10px;
   display: flex;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+.preview-box {
+  border-style: dashed;
+  width: 5cm;
+  height: 1cm;
+  padding: 2px;
+  text-align: center;
+  overflow-wrap: break-word;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px;
+}
+
+.preview-text {
+  max-width: 100%;
 }

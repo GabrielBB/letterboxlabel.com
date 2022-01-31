@@ -56,10 +56,6 @@ body {
   display: flex;
 }
 
-.hidden {
-  visibility: hidden;
-}
-
 .preview-box {
   border-style: dashed;
   width: 5cm;
@@ -80,4 +76,10 @@ body {
 
 .preview-text {
   max-width: 100%;
+}
+
+@media print {
+  .noprint {
+    visibility: hidden;
+  }
 }

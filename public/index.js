@@ -18,13 +18,10 @@
   const form = document.getElementById("form");
   button.addEventListener("click", (e) => {
     e.preventDefault();
-
     if (nameInput.value.trim() === "") {
       alert("Please type your name first");
     } else {
-      form.classList.add("hidden");
       window.print();
-      form.classList.remove("hidden");
     }
   });
 })();

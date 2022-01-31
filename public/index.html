@@ -1,0 +1,67 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header></header>
+      <main>
+        <div class="title">
+          <h2>LetterboxLabel.com</h2>
+          <h5>Letterbox Name Tag Generator</h5>
+        </div>
+        <form id="form">
+          <textarea
+            cols="30"
+            rows="3"
+            maxlength="52"
+            id="name-input"
+            placeholder="Type your name here"
+          ></textarea>
+          <button id="button-submit">Print</button>
+        </form>
+        <div class="preview-boxes">
+          <span>✂️</span>
+          <div class="preview-box">
+            <span class="preview-text"></span>
+          </div>
+          <span>✂️</span>
+          <div class="preview-box">
+            <span class="preview-text"></span>
+          </div>
+        </div>
+        <div class="sign">
+          <span>Made with ❤️ by </span>
+          <a href="https://github.com/GabrielBB"> Gabriel Basilio </a>
+        </div>
+      </main>
+      <footer></footer>
+    </div>
+
+    <script type="module">
+      // Import the functions you need from the SDKs you need
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.5/firebase-app.js";
+      import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.6.5/firebase-analytics.js";
+      // TODO: Add SDKs for Firebase products that you want to use
+      // https://firebase.google.com/docs/web/setup#available-libraries
+
+      // Your web app's Firebase configuration
+      // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+      const firebaseConfig = {
+        apiKey: "AIzaSyAWEOW8Yi71vsuuXZdwj-dBakjfJzbRfcM",
+        authDomain: "letterboxlabel-41be7.firebaseapp.com",
+        projectId: "letterboxlabel-41be7",
+        storageBucket: "letterboxlabel-41be7.appspot.com",
+        messagingSenderId: "714669317518",
+        appId: "1:714669317518:web:bd1961f6d097af57b0d8df",
+        measurementId: "G-DLY3NVW9TC",
+      };
+
+      // Initialize Firebase
+      const app = initializeApp(firebaseConfig);
+      const analytics = getAnalytics(app);
+    </script>
+
+    <script type="text/javascript" src="./index.js"></script>
+  </body>
+</html>

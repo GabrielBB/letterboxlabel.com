@@ -1,21 +1,22 @@
 (function () {
-  const nameInput = document.getElementById("name-input");
-  nameInput.addEventListener("keypress", (e) => {
-    const value = e.target.value;
-    const numberOfLines = (value.match(/\n/g) || []).length + 1;
-    if (numberOfLines > 2) {
-      e.preventDefault();
-    }
-  });
-
+  const MAX_INPUT_LENGTH = 52;
   const previewText = document.getElementsByClassName("preview-text");
+  const nameInput = document.getElementById("name-input");
+
   nameInput.addEventListener("keyup", (e) => {
+    const currentValue = e.target.value;
+    if (e.key === "Enter" && currentValue.split("\n").length > 2) {
+      e.target.value = currentValue.slice(0, -1);
+      return;
+    }
+
+    e.target.value = currentValue.substring(0, MAX_INPUT_LENGTH);
+
     previewText[0].innerText = e.target.value;
     previewText[1].innerText = e.target.value;
   });
 
   const button = document.getElementById("button-submit");
-  const form = document.getElementById("form");
   button.addEventListener("click", (e) => {
     e.preventDefault();
     if (nameInput.value.trim() === "") {

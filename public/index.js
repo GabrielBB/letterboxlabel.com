@@ -17,6 +17,8 @@
   const button = document.getElementById("button-submit");
   const form = document.getElementById("form");
   button.addEventListener("click", (e) => {
+    e.preventDefault();
+
     if (nameInput.value.trim() === "") {
       alert("Please type your name first");
     } else {
@@ -24,6 +26,5 @@
       window.print();
       form.classList.remove("hidden");
     }
-    e.preventDefault();
   });
 })();

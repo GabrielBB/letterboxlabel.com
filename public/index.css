@@ -51,7 +51,7 @@ body {
   padding: 4px;
 }
 
-form {
+#form {
   column-gap: 10px;
   display: flex;
 }

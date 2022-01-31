@@ -19,10 +19,11 @@
   button.addEventListener("click", (e) => {
     if (nameInput.value.trim() === "") {
       alert("Please type your name first");
-      return;
+    } else {
+      form.classList.add("hidden");
+      window.print();
+      form.classList.remove("hidden");
     }
-    form.classList.add("hidden");
-    window.print();
-    form.classList.remove("hidden");
+    e.preventDefault();
   });
 })();

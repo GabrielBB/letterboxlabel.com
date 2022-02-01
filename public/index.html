@@ -47,23 +47,21 @@
       </div>
       <div class="form-container">
         <div class="no-print form">
-          <input id="input-1" class="name-input" placeholder="First line" />
-          <input id="input-2" class="name-input" placeholder="Second line" />
+          <div>
+            <input id="input-1" class="name-input" placeholder="First line" />
+          </div>
+          <div>
+            <input id="input-2" class="name-input" placeholder="Second line" />
+          </div>
           <button id="button-submit">Print</button>
         </div>
         <div class="previews-container">
           <div class="preview-container">
-            <span>✂️</span>
+            <span class="only-print">✂️</span>
+            <input id="color-chooser" type="color" class="no-print" />
             <div class="preview">
-              <span class="first-line"></span>
-              <span class="second-line"></span>
-            </div>
-          </div>
-          <div class="preview-container only-print">
-            <span>✂️</span>
-            <div class="preview">
-              <span class="first-line"></span>
-              <span class="second-line"></span>
+              <span class="line first-line"></span>
+              <span class="line second-line"></span>
             </div>
           </div>
         </div>

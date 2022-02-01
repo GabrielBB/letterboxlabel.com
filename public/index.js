@@ -1,31 +1,33 @@
 (function () {
   const MAX_INPUT_LENGTH = 22;
 
-  const firstLines = document.getElementsByClassName("first-line");
-  const secondLines = document.getElementsByClassName("second-line");
+  const firstInput = document.querySelector("#input-1");
+  const secondInput = document.querySelector("#input-2");
+  const colorInput = document.querySelector("#color-chooser");
+  const button = document.querySelector("#button-submit");
 
-  const firstInput = document.getElementById("input-1");
-  const secondInput = document.getElementById("input-2");
+  const firstLine = document.querySelector(".first-line");
+  const secondLine = document.querySelector(".second-line");
 
   firstInput.addEventListener("keyup", (e) => {
     e.target.value = e.target.value.substring(0, MAX_INPUT_LENGTH);
-
-    firstLines[0].innerText = e.target.value;
-    firstLines[1].innerText = e.target.value;
+    firstLine.innerText = e.target.value;
   });
 
   secondInput.addEventListener("keyup", (e) => {
     e.target.value = e.target.value.substring(0, MAX_INPUT_LENGTH);
-
-    secondLines[0].innerText = e.target.value;
-    secondLines[1].innerText = e.target.value;
+    secondLine.innerText = e.target.value;
   });
 
-  const button = document.getElementById("button-submit");
+  colorInput.addEventListener("input", (e) => {
+    firstLine.style.color = e.target.value;
+    secondLine.style.color = e.target.value;
+  });
+
   button.addEventListener("click", (e) => {
     e.preventDefault();
     if (firstInput.value.trim() === "") {
-      alert("Please type your name first");
+      alert("Please type your name(s) first");
     } else {
       window.print();
     }

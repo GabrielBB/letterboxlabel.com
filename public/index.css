@@ -29,8 +29,13 @@ body {
   background-color: lightgray;
 }
 
+#color-chooser {
+  width: 30px;
+}
+
 .name-input {
   padding: 5px;
+  width: 100%;
 }
 
 #button-submit {
@@ -78,7 +83,7 @@ body {
 }
 
 .only-print {
-  visibility: hidden;
+  display: none;
 }
 
 @media print {
@@ -87,6 +92,6 @@ body {
   }
 
   .only-print {
-    visibility: visible;
+    display: flex;
   }
 }

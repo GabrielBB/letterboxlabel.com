@@ -1,6 +1,8 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+  font-family: "system-ui";
 }
 
 .container {
@@ -9,28 +11,16 @@
   min-height: 100%;
   max-width: 900px;
   background-color: rgb(253, 246, 246);
+  display: flex;
+  flex-direction: column;
 }
 
 .title {
   margin-bottom: 20px;
-  font-family: "system-ui";
   color: rgb(68, 68, 68);
   text-align: center;
   width: 100%;
   background-color: aliceblue;
-}
-
-.sign {
-  margin-top: 20px;
-  color: rgb(51, 51, 51);
-}
-
-main {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  padding: 10px;
 }
 
 body {
@@ -39,11 +29,8 @@ body {
   background-color: lightgray;
 }
 
-#name-input {
-  border-radius: 10px;
-  padding: 6px;
-  overflow: hidden;
-  resize: none;
+.name-input {
+  padding: 5px;
 }
 
 #button-submit {
@@ -51,35 +38,55 @@ body {
   padding: 4px;
 }
 
-#form {
-  column-gap: 10px;
+.form-container {
   display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.preview-box {
+.form {
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+  max-width: 150px;
+}
+
+.previews-container {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.preview-container {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.preview {
   border-style: dashed;
-  width: 5cm;
-  height: 1cm;
+  width: 6cm;
+  height: 1.4cm;
   padding: 2px;
-  text-align: center;
-  overflow-wrap: break-word;
   font-weight: bold;
+  font-size: 18px;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 20px;
+  flex-direction: column;
 }
 
-.preview-boxes {
-  margin-top: 20px;
-}
-
-.preview-text {
-  max-width: 100%;
+.only-print {
+  visibility: hidden;
 }
 
 @media print {
-  .noprint {
-    visibility: hidden;
+  .no-print {
+    display: none !important;
+  }
+
+  .only-print {
+    visibility: visible;
   }
 }

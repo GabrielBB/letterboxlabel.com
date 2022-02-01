@@ -1,25 +1,30 @@
 (function () {
-  const MAX_INPUT_LENGTH = 52;
-  const previewText = document.getElementsByClassName("preview-text");
-  const nameInput = document.getElementById("name-input");
+  const MAX_INPUT_LENGTH = 22;
 
-  nameInput.addEventListener("keyup", (e) => {
-    const currentValue = e.target.value;
-    if (e.key === "Enter" && currentValue.split("\n").length > 2) {
-      e.target.value = currentValue.slice(0, -1);
-      return;
-    }
+  const firstLines = document.getElementsByClassName("first-line");
+  const secondLines = document.getElementsByClassName("second-line");
 
-    e.target.value = currentValue.substring(0, MAX_INPUT_LENGTH);
+  const firstInput = document.getElementById("input-1");
+  const secondInput = document.getElementById("input-2");
 
-    previewText[0].innerText = e.target.value;
-    previewText[1].innerText = e.target.value;
+  firstInput.addEventListener("keyup", (e) => {
+    e.target.value = e.target.value.substring(0, MAX_INPUT_LENGTH);
+
+    firstLines[0].innerText = e.target.value;
+    firstLines[1].innerText = e.target.value;
+  });
+
+  secondInput.addEventListener("keyup", (e) => {
+    e.target.value = e.target.value.substring(0, MAX_INPUT_LENGTH);
+
+    secondLines[0].innerText = e.target.value;
+    secondLines[1].innerText = e.target.value;
   });
 
   const button = document.getElementById("button-submit");
   button.addEventListener("click", (e) => {
     e.preventDefault();
-    if (nameInput.value.trim() === "") {
+    if (firstInput.value.trim() === "") {
       alert("Please type your name first");
     } else {
       window.print();

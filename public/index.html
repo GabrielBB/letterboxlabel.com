@@ -41,44 +41,33 @@
   </head>
   <body>
     <div class="container">
-      <main>
-        <div class="title">
-          <h2>LetterboxLabel.com</h2>
-          <h5>Letterbox Name Tag Generator</h5>
-        </div>
-        <div id="form" class="noprint">
-          <textarea
-            cols="30"
-            rows="3"
-            id="name-input"
-            placeholder="Type your name here"
-          ></textarea>
+      <div class="title no-print">
+        <h2>LetterboxLabel.com</h2>
+        <h5>Letterbox Name Tag Generator</h5>
+      </div>
+      <div class="form-container">
+        <div class="no-print form">
+          <input id="input-1" class="name-input" placeholder="First line" />
+          <input id="input-2" class="name-input" placeholder="Second line" />
           <button id="button-submit">Print</button>
         </div>
-        <div class="preview-boxes">
-          <span>✂️</span>
-          <div class="preview-box">
-            <span class="preview-text"></span>
+        <div class="previews-container">
+          <div class="preview-container">
+            <span>✂️</span>
+            <div class="preview">
+              <span class="first-line"></span>
+              <span class="second-line"></span>
+            </div>
           </div>
-          <span>✂️</span>
-          <div class="preview-box">
-            <span class="preview-text"></span>
+          <div class="preview-container only-print">
+            <span>✂️</span>
+            <div class="preview">
+              <span class="first-line"></span>
+              <span class="second-line"></span>
+            </div>
           </div>
         </div>
-        <iframe
-          width="350"
-          height="250"
-          src="https://www.youtube.com/embed/v_UlfusrBg8?controls=0"
-          title="How to change your mailbox plate"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          class="noprint"
-        ></iframe>
-        <div class="sign">
-          <span>Made with ❤️ by </span>
-          <a href="https://github.com/GabrielBB"> Gabriel Basilio </a>
-        </div>
-      </main>
+      </div>
     </div>
 
     <script type="text/javascript" src="./index.js"></script>

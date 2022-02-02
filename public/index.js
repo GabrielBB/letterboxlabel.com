@@ -1,5 +1,5 @@
 (function () {
-  const MAX_INPUT_LENGTH = 22;
+  const MAX_INPUT_LENGTH = 20;
 
   const firstInput = document.querySelector("#input-1");
   const secondInput = document.querySelector("#input-2");

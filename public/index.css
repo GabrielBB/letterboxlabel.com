@@ -69,17 +69,29 @@ body {
   gap: 5px;
 }
 
-.preview {
+.side {
   border-style: dashed;
   width: 6cm;
-  height: 1.4cm;
+  height: 1.6cm;
   padding: 2px;
   font-weight: bold;
-  font-size: 18px;
+  font-size: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
+}
+
+.front-side {
+  border-bottom-style: double;
+}
+
+.back-side {
+  border-top: 0;
+}
+
+.fold-icon {
+  height: 35px;
 }
 
 .only-print {

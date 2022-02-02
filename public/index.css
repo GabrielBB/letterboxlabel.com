@@ -13,10 +13,10 @@
   background-color: rgb(253, 246, 246);
   display: flex;
   flex-direction: column;
+  gap: 30px;
 }
 
 .title {
-  margin-bottom: 20px;
   color: rgb(68, 68, 68);
   text-align: center;
   width: 100%;
@@ -27,6 +27,10 @@ body {
   margin: 0;
   justify-content: center;
   background-color: lightgray;
+}
+
+.size {
+  color: rgba(223, 4, 4, 0.548);
 }
 
 #color-chooser {
@@ -47,6 +51,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 10px;
 }
 
 .form {
@@ -80,6 +85,13 @@ body {
   align-items: center;
   justify-content: center;
   flex-direction: column;
+}
+
+.description {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 5px;
 }
 
 .front-side {

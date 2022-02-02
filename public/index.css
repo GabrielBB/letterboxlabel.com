@@ -23,6 +23,10 @@
   background-color: aliceblue;
 }
 
+.donation-form {
+  margin: 5px;
+}
+
 body {
   margin: 0;
   justify-content: center;

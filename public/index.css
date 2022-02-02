@@ -110,6 +110,17 @@ body {
   display: none;
 }
 
+.instructions {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+  flex-wrap: wrap;
+}
+
+.instruction {
+  max-height: 150px;
+}
+
 @media print {
   .no-print {
     display: none !important;

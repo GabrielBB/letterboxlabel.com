@@ -3,6 +3,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "system-ui";
+  font-size: 17px;
 }
 
 .container {
@@ -16,15 +17,20 @@
   gap: 30px;
 }
 
-.title {
+header {
   color: rgb(68, 68, 68);
   text-align: center;
   width: 100%;
   background-color: aliceblue;
 }
 
+.header-description {
+  font-size: 16px;
+  color: rgb(85, 84, 84);
+}
+
 .donation-form {
-  margin: 5px;
+  margin: 8px;
 }
 
 body {
@@ -34,11 +40,12 @@ body {
 }
 
 .size {
-  color: rgba(223, 4, 4, 0.548);
+  color: rgba(59, 54, 54, 0.548);
 }
 
 #color-chooser {
-  width: 30px;
+  width: 40px;
+  height: 40px;
 }
 
 .name-input {
@@ -47,11 +54,12 @@ body {
 }
 
 #button-submit {
+  margin-top: 8px;
   border-radius: 10px;
   padding: 4px;
 }
 
-.form-container {
+main {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -62,20 +70,14 @@ body {
   display: flex;
   gap: 10px;
   flex-direction: column;
-  max-width: 150px;
-}
-
-.previews-container {
-  margin-top: 20px;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
+  max-width: 200px;
 }
 
 .preview-container {
   display: flex;
   align-items: center;
   gap: 5px;
+  margin-bottom: 20px;
 }
 
 .side {
@@ -84,7 +86,6 @@ body {
   height: 1.6cm;
   padding: 2px;
   font-weight: bold;
-  font-size: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -93,6 +94,7 @@ body {
 
 .description {
   display: flex;
+  flex-direction: column;
   text-align: center;
   justify-content: center;
   gap: 5px;
@@ -116,15 +118,26 @@ body {
   display: none;
 }
 
-.instructions {
+.example-container {
+  margin-top: 15px;
   display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 5px;
+}
+
+.examples {
+  display: flex;
+  flex-direction: column;
   justify-content: center;
   gap: 5px;
   flex-wrap: wrap;
 }
 
-.instruction {
-  max-height: 150px;
+.example {
+  height: 300px;
+  width: 300px;
 }
 
 @media print {
@@ -135,4 +148,10 @@ body {
   .only-print {
     display: flex;
   }
+}
+
+footer {
+  margin-left: 10px;
+  font-size: 14px;
+  color: rgb(66, 66, 66);
 }

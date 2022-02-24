@@ -45,8 +45,11 @@
   </head>
   <body>
     <div class="container">
-      <div class="title no-print">
+      <header class="no-print">
         <h2>LetterboxLabel.com</h2>
+        <h5 class="header-description">
+          Print your letterbox label in standard size
+        </h5>
         <form
           class="donation-form"
           action="https://www.paypal.com/donate"
@@ -62,24 +65,11 @@
             alt="Donate with PayPal button"
           />
         </form>
-      </div>
-      <div class="description no-print">
-        <p>
-          Print 🖨️ your name for your letterbox 📮 in standard size (6cm x 2cm).
-          Just fold it and insert into your plate ✅
-        </p>
-      </div>
-      <div class="form-container">
-        <div class="no-print form">
-          <div>
-            <input id="input-1" class="name-input" placeholder="First line" />
-          </div>
-          <div>
-            <input id="input-2" class="name-input" placeholder="Second line" />
-          </div>
-          <button id="button-submit">Print</button>
+      </header>
+      <main>
+        <div class="description no-print">
+          Preview your label with the text and color of your choice:
         </div>
-        <div class="previews-container">
           <div class="preview-container">
             <span class="only-print">✂️</span>
             <input id="color-chooser" type="color" class="no-print" />
@@ -90,7 +80,7 @@
                 </span>
                 <span class="line second-line"></span>
               </div>
-              <div class="side back-side">
+              <div class="side back-side only-print">
                 <img
                   class="fold-icon"
                   src="images/fold_icon.png"
@@ -98,20 +88,40 @@
                 />
               </div>
             </div>
+        </div>
+        <div class="description no-print">
+          Fill either 1 or 2 names. Click the print button after satisfying results
+        </div>
+        <div class="no-print form">
+          <div>
+            <input id="input-1" class="name-input" placeholder="Your name here" />
           </div>
+          <div>
+            <input id="input-2" class="name-input" placeholder="Other name here" />
+          </div>
+          <button id="button-submit">Print</button>
         </div>
-      </div>
-      <div class="instructions no-print">
-        <div>
-          <img class="instruction" src="images/instructions/first.jpg" />
-          <img class="instruction" src="images/instructions/second.jpg" />
+        <div class="examples no-print">
+            <div class="example-container">
+              <span>1. Use a scissor to cut following marked edges ✂️</span>
+              <img title="Use a scissor to cut following marked edges"
+               class="example" src="images/instructions/first.jpg" />
+            </div>
+            <div class="example-container">
+              <span>2. Fold the paper and insert in your label cover</span>
+              <img title="Fold the paper and insert in your label cover" class="example" src="images/instructions/second.jpg" />
+            </div>
+            <div class="example-container">
+              <span>3. Your names should be on the front side 😊</span>
+              <img title="Your names should be on the front side" class="example" src="images/instructions/third.jpg" />
+            </div>
+            <div class="example-container">
+              <span>4. Insert it in your letterbox! ✨</span>
+              <img title="Insert it in your letterbox!" class="example" src="images/instructions/fourth.jpg" />
+            </div>
         </div>
-        <div>
-          <img class="instruction" src="images/instructions/third.jpg" />
-          <img class="instruction" src="images/instructions/fourth.jpg" />
-        </div>
-      </div>
-    </div>
+      </main>
+      <footer>Made with ❤️ in 🇪🇺 by Gabriel Basilio</footer>
 
     <script type="text/javascript" src="./index.js"></script>
   </body>
